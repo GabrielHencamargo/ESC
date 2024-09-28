@@ -1,4 +1,5 @@
 `include "../Tarefa5/hack_alu.v"
+`include "../Tarefa5/RAM16K.v"
 
 module CPU (
     input wire [15:0] inM,
@@ -7,8 +8,8 @@ module CPU (
     input wire clk,
     output reg [15:0] outM,
     output reg writeM,
-    output reg [14:0] addressM,
-    output reg [14:0] pc
+    output reg [15:0] addressM,
+    output reg [15:0] pc
 );
 
     reg [15:0] A;
@@ -36,9 +37,16 @@ module CPU (
         .carry_out(aluZero)
     );
 
+    ram16384 memory (
+        .address(pc[14:0]),
+        .data_in(inM),
+        .write_enable(writeM),
+        .clk(clk)
+    );
+
     always @(posedge clk or posedge reset) begin
         if (reset)
-            pc <= 15'd0;
+            pc <= 16'd0;
         else
             pc <= nextPC;
     end
@@ -57,7 +65,8 @@ module CPU (
                 (instruction[0] && !aluNeg && !aluZero))
                 nextPC <= A[14:0];
             else
-                nextPC <= pc + 15'd1;
+                nextPC <= nextPC + 1;
+            pc <= nextPC;
         end
     end
 endmodule
