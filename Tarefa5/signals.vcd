@@ -1,0 +1,676 @@
+$date
+	Sat Sep 28 12:23:59 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module CPU_tb $end
+$var wire 1 ! writeM $end
+$var wire 15 " pc [14:0] $end
+$var wire 16 # outM [15:0] $end
+$var wire 15 $ addressM [14:0] $end
+$var reg 1 % clk $end
+$var reg 16 & inM [15:0] $end
+$var reg 16 ' instruction [15:0] $end
+$var reg 1 ( reset $end
+$scope module cpu $end
+$var wire 1 ) aluNeg $end
+$var wire 1 * aluZero $end
+$var wire 1 % clk $end
+$var wire 16 + inM [15:0] $end
+$var wire 16 , instruction [15:0] $end
+$var wire 1 - isAInstruction $end
+$var wire 1 ( reset $end
+$var wire 1 . isCInstruction $end
+$var wire 16 / aluOut [15:0] $end
+$var reg 16 0 A [15:0] $end
+$var reg 16 1 D [15:0] $end
+$var reg 15 2 addressM [14:0] $end
+$var reg 15 3 nextPC [14:0] $end
+$var reg 16 4 outM [15:0] $end
+$var reg 15 5 pc [14:0] $end
+$var reg 1 ! writeM $end
+$scope module alu $end
+$var wire 16 6 X [15:0] $end
+$var wire 16 7 Y [15:0] $end
+$var wire 1 * carry_out $end
+$var wire 1 8 f $end
+$var wire 1 9 nX $end
+$var wire 1 : nY $end
+$var wire 1 ; no $end
+$var wire 16 < out [15:0] $end
+$var wire 1 = zX $end
+$var wire 1 > zY $end
+$var reg 16 ? X_reg [15:0] $end
+$var reg 16 @ Y_reg [15:0] $end
+$var reg 16 A out_reg [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module add16bits $end
+$var wire 16 B a [15:0] $end
+$var wire 16 C b [15:0] $end
+$var wire 1 D carry_in $end
+$var wire 16 E sum [15:0] $end
+$var wire 16 F sum_temp [15:0] $end
+$var wire 1 G carry_out $end
+$var wire 16 H carry [15:0] $end
+$scope module fa0 $end
+$var wire 1 I a $end
+$var wire 1 J b $end
+$var wire 1 D carry_in $end
+$var wire 1 K carry_out $end
+$var wire 1 L sum $end
+$var wire 1 M s1 $end
+$var wire 1 N c2 $end
+$var wire 1 O c1 $end
+$scope module uut1 $end
+$var wire 1 I a $end
+$var wire 1 J b $end
+$var wire 1 O carry $end
+$var wire 1 M soma $end
+$upscope $end
+$scope module uut2 $end
+$var wire 1 M a $end
+$var wire 1 D b $end
+$var wire 1 N carry $end
+$var wire 1 L soma $end
+$upscope $end
+$upscope $end
+$scope module fa1 $end
+$var wire 1 P a $end
+$var wire 1 Q b $end
+$var wire 1 R carry_in $end
+$var wire 1 S carry_out $end
+$var wire 1 T sum $end
+$var wire 1 U s1 $end
+$var wire 1 V c2 $end
+$var wire 1 W c1 $end
+$scope module uut1 $end
+$var wire 1 P a $end
+$var wire 1 Q b $end
+$var wire 1 W carry $end
+$var wire 1 U soma $end
+$upscope $end
+$scope module uut2 $end
+$var wire 1 U a $end
+$var wire 1 R b $end
+$var wire 1 V carry $end
+$var wire 1 T soma $end
+$upscope $end
+$upscope $end
+$scope module fa10 $end
+$var wire 1 X a $end
+$var wire 1 Y b $end
+$var wire 1 Z carry_in $end
+$var wire 1 [ carry_out $end
+$var wire 1 \ sum $end
+$var wire 1 ] s1 $end
+$var wire 1 ^ c2 $end
+$var wire 1 _ c1 $end
+$scope module uut1 $end
+$var wire 1 X a $end
+$var wire 1 Y b $end
+$var wire 1 _ carry $end
+$var wire 1 ] soma $end
+$upscope $end
+$scope module uut2 $end
+$var wire 1 ] a $end
+$var wire 1 Z b $end
+$var wire 1 ^ carry $end
+$var wire 1 \ soma $end
+$upscope $end
+$upscope $end
+$scope module fa11 $end
+$var wire 1 ` a $end
+$var wire 1 a b $end
+$var wire 1 b carry_in $end
+$var wire 1 c carry_out $end
+$var wire 1 d sum $end
+$var wire 1 e s1 $end
+$var wire 1 f c2 $end
+$var wire 1 g c1 $end
+$scope module uut1 $end
+$var wire 1 ` a $end
+$var wire 1 a b $end
+$var wire 1 g carry $end
+$var wire 1 e soma $end
+$upscope $end
+$scope module uut2 $end
+$var wire 1 e a $end
+$var wire 1 b b $end
+$var wire 1 f carry $end
+$var wire 1 d soma $end
+$upscope $end
+$upscope $end
+$scope module fa12 $end
+$var wire 1 h a $end
+$var wire 1 i b $end
+$var wire 1 j carry_in $end
+$var wire 1 k carry_out $end
+$var wire 1 l sum $end
+$var wire 1 m s1 $end
+$var wire 1 n c2 $end
+$var wire 1 o c1 $end
+$scope module uut1 $end
+$var wire 1 h a $end
+$var wire 1 i b $end
+$var wire 1 o carry $end
+$var wire 1 m soma $end
+$upscope $end
+$scope module uut2 $end
+$var wire 1 m a $end
+$var wire 1 j b $end
+$var wire 1 n carry $end
+$var wire 1 l soma $end
+$upscope $end
+$upscope $end
+$scope module fa13 $end
+$var wire 1 p a $end
+$var wire 1 q b $end
+$var wire 1 r carry_in $end
+$var wire 1 s carry_out $end
+$var wire 1 t sum $end
+$var wire 1 u s1 $end
+$var wire 1 v c2 $end
+$var wire 1 w c1 $end
+$scope module uut1 $end
+$var wire 1 p a $end
+$var wire 1 q b $end
+$var wire 1 w carry $end
+$var wire 1 u soma $end
+$upscope $end
+$scope module uut2 $end
+$var wire 1 u a $end
+$var wire 1 r b $end
+$var wire 1 v carry $end
+$var wire 1 t soma $end
+$upscope $end
+$upscope $end
+$scope module fa14 $end
+$var wire 1 x a $end
+$var wire 1 y b $end
+$var wire 1 z carry_in $end
+$var wire 1 { carry_out $end
+$var wire 1 | sum $end
+$var wire 1 } s1 $end
+$var wire 1 ~ c2 $end
+$var wire 1 !" c1 $end
+$scope module uut1 $end
+$var wire 1 x a $end
+$var wire 1 y b $end
+$var wire 1 !" carry $end
+$var wire 1 } soma $end
+$upscope $end
+$scope module uut2 $end
+$var wire 1 } a $end
+$var wire 1 z b $end
+$var wire 1 ~ carry $end
+$var wire 1 | soma $end
+$upscope $end
+$upscope $end
+$scope module fa15 $end
+$var wire 1 "" a $end
+$var wire 1 #" b $end
+$var wire 1 $" carry_in $end
+$var wire 1 %" carry_out $end
+$var wire 1 &" sum $end
+$var wire 1 '" s1 $end
+$var wire 1 (" c2 $end
+$var wire 1 )" c1 $end
+$scope module uut1 $end
+$var wire 1 "" a $end
+$var wire 1 #" b $end
+$var wire 1 )" carry $end
+$var wire 1 '" soma $end
+$upscope $end
+$scope module uut2 $end
+$var wire 1 '" a $end
+$var wire 1 $" b $end
+$var wire 1 (" carry $end
+$var wire 1 &" soma $end
+$upscope $end
+$upscope $end
+$scope module fa2 $end
+$var wire 1 *" a $end
+$var wire 1 +" b $end
+$var wire 1 ," carry_in $end
+$var wire 1 -" carry_out $end
+$var wire 1 ." sum $end
+$var wire 1 /" s1 $end
+$var wire 1 0" c2 $end
+$var wire 1 1" c1 $end
+$scope module uut1 $end
+$var wire 1 *" a $end
+$var wire 1 +" b $end
+$var wire 1 1" carry $end
+$var wire 1 /" soma $end
+$upscope $end
+$scope module uut2 $end
+$var wire 1 /" a $end
+$var wire 1 ," b $end
+$var wire 1 0" carry $end
+$var wire 1 ." soma $end
+$upscope $end
+$upscope $end
+$scope module fa3 $end
+$var wire 1 2" a $end
+$var wire 1 3" b $end
+$var wire 1 4" carry_in $end
+$var wire 1 5" carry_out $end
+$var wire 1 6" sum $end
+$var wire 1 7" s1 $end
+$var wire 1 8" c2 $end
+$var wire 1 9" c1 $end
+$scope module uut1 $end
+$var wire 1 2" a $end
+$var wire 1 3" b $end
+$var wire 1 9" carry $end
+$var wire 1 7" soma $end
+$upscope $end
+$scope module uut2 $end
+$var wire 1 7" a $end
+$var wire 1 4" b $end
+$var wire 1 8" carry $end
+$var wire 1 6" soma $end
+$upscope $end
+$upscope $end
+$scope module fa4 $end
+$var wire 1 :" a $end
+$var wire 1 ;" b $end
+$var wire 1 <" carry_in $end
+$var wire 1 =" carry_out $end
+$var wire 1 >" sum $end
+$var wire 1 ?" s1 $end
+$var wire 1 @" c2 $end
+$var wire 1 A" c1 $end
+$scope module uut1 $end
+$var wire 1 :" a $end
+$var wire 1 ;" b $end
+$var wire 1 A" carry $end
+$var wire 1 ?" soma $end
+$upscope $end
+$scope module uut2 $end
+$var wire 1 ?" a $end
+$var wire 1 <" b $end
+$var wire 1 @" carry $end
+$var wire 1 >" soma $end
+$upscope $end
+$upscope $end
+$scope module fa5 $end
+$var wire 1 B" a $end
+$var wire 1 C" b $end
+$var wire 1 D" carry_in $end
+$var wire 1 E" carry_out $end
+$var wire 1 F" sum $end
+$var wire 1 G" s1 $end
+$var wire 1 H" c2 $end
+$var wire 1 I" c1 $end
+$scope module uut1 $end
+$var wire 1 B" a $end
+$var wire 1 C" b $end
+$var wire 1 I" carry $end
+$var wire 1 G" soma $end
+$upscope $end
+$scope module uut2 $end
+$var wire 1 G" a $end
+$var wire 1 D" b $end
+$var wire 1 H" carry $end
+$var wire 1 F" soma $end
+$upscope $end
+$upscope $end
+$scope module fa6 $end
+$var wire 1 J" a $end
+$var wire 1 K" b $end
+$var wire 1 L" carry_in $end
+$var wire 1 M" carry_out $end
+$var wire 1 N" sum $end
+$var wire 1 O" s1 $end
+$var wire 1 P" c2 $end
+$var wire 1 Q" c1 $end
+$scope module uut1 $end
+$var wire 1 J" a $end
+$var wire 1 K" b $end
+$var wire 1 Q" carry $end
+$var wire 1 O" soma $end
+$upscope $end
+$scope module uut2 $end
+$var wire 1 O" a $end
+$var wire 1 L" b $end
+$var wire 1 P" carry $end
+$var wire 1 N" soma $end
+$upscope $end
+$upscope $end
+$scope module fa7 $end
+$var wire 1 R" a $end
+$var wire 1 S" b $end
+$var wire 1 T" carry_in $end
+$var wire 1 U" carry_out $end
+$var wire 1 V" sum $end
+$var wire 1 W" s1 $end
+$var wire 1 X" c2 $end
+$var wire 1 Y" c1 $end
+$scope module uut1 $end
+$var wire 1 R" a $end
+$var wire 1 S" b $end
+$var wire 1 Y" carry $end
+$var wire 1 W" soma $end
+$upscope $end
+$scope module uut2 $end
+$var wire 1 W" a $end
+$var wire 1 T" b $end
+$var wire 1 X" carry $end
+$var wire 1 V" soma $end
+$upscope $end
+$upscope $end
+$scope module fa8 $end
+$var wire 1 Z" a $end
+$var wire 1 [" b $end
+$var wire 1 \" carry_in $end
+$var wire 1 ]" carry_out $end
+$var wire 1 ^" sum $end
+$var wire 1 _" s1 $end
+$var wire 1 `" c2 $end
+$var wire 1 a" c1 $end
+$scope module uut1 $end
+$var wire 1 Z" a $end
+$var wire 1 [" b $end
+$var wire 1 a" carry $end
+$var wire 1 _" soma $end
+$upscope $end
+$scope module uut2 $end
+$var wire 1 _" a $end
+$var wire 1 \" b $end
+$var wire 1 `" carry $end
+$var wire 1 ^" soma $end
+$upscope $end
+$upscope $end
+$scope module fa9 $end
+$var wire 1 b" a $end
+$var wire 1 c" b $end
+$var wire 1 d" carry_in $end
+$var wire 1 e" carry_out $end
+$var wire 1 f" sum $end
+$var wire 1 g" s1 $end
+$var wire 1 h" c2 $end
+$var wire 1 i" c1 $end
+$scope module uut1 $end
+$var wire 1 b" a $end
+$var wire 1 c" b $end
+$var wire 1 i" carry $end
+$var wire 1 g" soma $end
+$upscope $end
+$scope module uut2 $end
+$var wire 1 g" a $end
+$var wire 1 d" b $end
+$var wire 1 h" carry $end
+$var wire 1 f" soma $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+xi"
+xh"
+xg"
+xf"
+xe"
+xd"
+zc"
+zb"
+xa"
+x`"
+x_"
+x^"
+x]"
+x\"
+z["
+zZ"
+xY"
+xX"
+xW"
+xV"
+xU"
+xT"
+zS"
+zR"
+xQ"
+xP"
+xO"
+xN"
+xM"
+xL"
+zK"
+zJ"
+xI"
+xH"
+xG"
+xF"
+xE"
+xD"
+zC"
+zB"
+xA"
+x@"
+x?"
+x>"
+x="
+x<"
+z;"
+z:"
+x9"
+x8"
+x7"
+x6"
+x5"
+x4"
+z3"
+z2"
+x1"
+x0"
+x/"
+x."
+x-"
+x,"
+z+"
+z*"
+x)"
+x("
+x'"
+x&"
+x%"
+x$"
+z#"
+z""
+x!"
+x~
+x}
+x|
+x{
+xz
+zy
+zx
+xw
+xv
+xu
+xt
+xs
+xr
+zq
+zp
+xo
+xn
+xm
+xl
+xk
+xj
+zi
+zh
+xg
+xf
+xe
+xd
+xc
+xb
+za
+z`
+x_
+x^
+x]
+x\
+x[
+xZ
+zY
+zX
+xW
+xV
+xU
+xT
+xS
+xR
+zQ
+zP
+xO
+xN
+xM
+xL
+xK
+zJ
+zI
+bx H
+xG
+bx F
+bx E
+zD
+bz C
+bz B
+bx A
+bx @
+bx ?
+x>
+x=
+bx <
+x;
+x:
+x9
+x8
+bx 7
+bx 6
+b0 5
+bx 4
+bx 3
+bx 2
+bx 1
+bx 0
+bx /
+x.
+x-
+bx ,
+bx +
+z*
+z)
+1(
+bx '
+bx &
+0%
+bx $
+bx #
+b0 "
+x!
+$end
+#5
+1%
+#10
+1-
+0.
+0=
+09
+0>
+0:
+08
+0;
+0%
+b1111 '
+b1111 ,
+0(
+#15
+b1111 7
+b1111 0
+bx "
+bx 5
+1%
+#20
+0-
+b1111 @
+bx ?
+1.
+1=
+19
+0%
+b1110110000010000 '
+b1110110000010000 ,
+#25
+bx 7
+b1111 $
+b1111 2
+0!
+bx 0
+1%
+#30
+1-
+bx @
+0.
+0=
+09
+0%
+b1 '
+b1 ,
+#35
+b1 7
+b1 0
+1%
+#40
+0-
+b1111111111111110 @
+1.
+1>
+1:
+0%
+b1010101111001101 &
+b1010101111001101 +
+b1110001100001000 '
+b1110001100001000 ,
+#45
+b1 $
+b1 2
+1!
+1%
+#50
+0%
+#55
+1%
+#60
+0%
+#65
+1%
+#70
+0%
+#75
+1%
+#80
+0%
+#85
+1%
+#90
+0%
+#95
+1%
+#100
+0%
